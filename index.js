@@ -1,9 +1,20 @@
 import { config } from "dotenv";
+import { express } from "express";
 import { Client, Events, GatewayIntentBits } from "discord.js";
 import { fetchData, submitData } from "./api.js";
 
 config();
 const token = process.env.DISCORD_BOT_TOKEN;
+const app = express();
+
+app.get("/", (req, res) => {
+  res.send("Discord bot is running!");
+});
+
+const PORT = 8000;
+app.listen(PORT, () =>
+  console.log(`Health check server running on port ${PORT}`),
+);
 
 const client = new Client({
   intents: [
