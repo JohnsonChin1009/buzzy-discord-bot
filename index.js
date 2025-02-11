@@ -1,5 +1,5 @@
 import { config } from "dotenv";
-import { express } from "express";
+import express from "express";
 import { Client, Events, GatewayIntentBits } from "discord.js";
 import { fetchData, submitData } from "./api.js";
 
@@ -10,6 +10,7 @@ const app = express();
 app.get("/", (req, res) => {
   res.send("Discord bot is running!");
 });
+3;
 
 const PORT = 8000;
 app.listen(PORT, () =>
