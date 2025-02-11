@@ -47,7 +47,7 @@ client.on(Events.MessageCreate, async (message) => {
 
       if (url.includes("meetup.com") || url.includes("lu.ma")) {
         const statusMessage = await message.reply(
-          "⏳ Uploading URL to Hive...",
+          "⏳ Hold on, let me do some magic...",
         );
 
         try {
@@ -64,9 +64,7 @@ client.on(Events.MessageCreate, async (message) => {
             }
           }
 
-          statusMessage.edit(
-            "✅ Website Scraped Successfully! Thank you for contributing!",
-          );
+          statusMessage.edit("🔥 Dope dope dope, see you at the event ser!");
         } catch (error) {
           console.error("Error fetching data:", error);
           message.reply("❌ Error fetching data. Please try again later.");
