@@ -6,7 +6,7 @@ const hiveServerURL = process.env.HIVE_SERVER_URL;
 
 async function fetchData(url) {
   try {
-    const response = await fetch(`${scraperServerURL}/api/meetup`, {
+    const response = await fetch(`${scraperServerURL}/api/event`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
