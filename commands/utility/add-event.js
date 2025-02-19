@@ -54,7 +54,7 @@ export default {
                     }
                 }
 
-                interaction.editReply("🔥 Dope dope dope, see you at the event ser!");
+                interaction.editReply(`🔥 Dope dope dope, see you at the event ser!\n\n📅 **Event added:** ${url}`); // add the added event url to this message
             } catch (error) {
                 console.error("Error fetching data:", error);
                 interaction.editReply("Error fetching data. Please try again later.");
